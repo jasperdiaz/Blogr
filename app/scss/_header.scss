@@ -3,6 +3,7 @@
 .header {
     position: relative;
     height: 39.4375em;
+    margin-bottom: 10em;
     // background: rgb(255,143,112);
     background: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 66%);
     border-bottom-left-radius: 8rem;
@@ -15,7 +16,7 @@
         right: 0;
         left: 0;
         bottom: 0;
-        background: url('/app/images/bg-pattern-intro.svg') no-repeat;
+        background: url('../../app/images/bg-pattern-intro.svg') no-repeat;
         background-size: 225%;
         background-position: 27% 52.6%;
         z-index: -1;
@@ -31,7 +32,7 @@
 
         a::after {
             content: '';
-            background: url('/app/images/icon-arrow-light.svg');
+            background: url('../../app/images/icon-arrow-light.svg');
             height: 7px;
             width: 10px;
             position: absolute;
