@@ -1,0 +1,33 @@
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+$font-stack-primary: 'Overpass', sans-serif;
+$font-stack-secondary: 'Ubuntu', sans-serif;
+
+// Primary Colors
+
+$lightRed: hsl(356, 100%, 66%); 
+$vLightRed: hsl(355, 100%, 74%);
+$vDarkBlue: hsl(208, 49%, 24%);
+
+// Neutral Colors
+
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$grayishBlue: hsl(240, 2%, 79%);
+$vDarkGrayishBlue: hsl(207, 13%, 34%);
+$vDarkBlackBlue: hsl(240, 10%, 16%);
+
+// Gradient Colors
+
+$vLightRedGradient: #ff8f70;
+$lightRedGradient: #ff3d54;
+
+$vDarkGrayBlue: hsl(237, 17%, 21%);
+$vDarkDesaturated: hsl(237, 23%, 32%);
+
+// Typography
+
+$font-default: 16px;

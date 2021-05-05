@@ -1,0 +1,113 @@
+@import 'variables';
+
+.header {
+    position: relative;
+    height: 39.4375em;
+    // background: rgb(255,143,112);
+    background: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 66%);
+    border-bottom-left-radius: 8rem;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: url('/app/images/bg-pattern-intro.svg') no-repeat;
+        background-size: 225%;
+        background-position: 27% 52.6%;
+        z-index: -1;
+    }
+}
+
+.navigation {
+    height: 10.5em;
+
+    &__dropdown {
+        position: relative;
+        display: inline-block;
+
+        a::after {
+            content: '';
+            background: url('/app/images/icon-arrow-light.svg');
+            height: 7px;
+            width: 10px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 10px;
+        }
+    }
+
+    &__dropdown a,
+    &__link {
+        margin: 0 20px;
+        font-weight: 500;
+        color: $white;
+    }
+
+    &__cta {
+        padding: 0.825em 2.375em;
+        border-radius: 50px;
+        background: $white;
+        color: $lightRed;
+
+        &:hover {
+            background: $vLightRed;
+            color: $white;
+        }
+    }
+}
+
+.feature {
+
+    margin: 5.9375em 0;
+
+    &__title {
+        margin-bottom: 20px;
+        line-height: 1;
+        font-size: 4.25rem;
+        text-align: center;
+        color: $white;
+    }
+
+    &__sub__title {
+        margin-bottom: 44px;
+        font-size: 20px;
+        color: $white;
+        font-family: $font-stack-primary;
+
+    }
+
+    %__cta {
+        padding: 0.825em 1.1em;
+        margin: 0 .4em;
+        border-radius: 50px;
+        font-weight: 700;
+    }
+
+    &__cta:first-child {
+        @extend %__cta;
+        align-self: center;
+        background: $white;
+        color: $lightRed;
+
+        &:hover {
+            background: $vLightRed;
+            color: $white;
+        }
+    }
+
+    &__cta:last-child {
+        @extend %__cta;
+        color: $white;
+        border: 1px solid $white;   
+
+        &:hover {
+            background: $white;
+            color: $lightRed;
+        }
+    }
+}
