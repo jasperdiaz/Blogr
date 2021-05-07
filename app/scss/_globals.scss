@@ -1,9 +1,11 @@
 @import 'variables';
+@import 'mixins';
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  outline: none;
 }
 
 body,
@@ -87,4 +89,23 @@ li {
     align-items: center;
   }
 
+}
+
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.container-mobile {
+  @include breakpoint-down (medium) {
+    width: 85%;
+  }
 }

@@ -21,6 +21,7 @@
         background-position: 27% 52.6%;
         z-index: -1;
     }
+
 }
 
 .navigation {
@@ -60,6 +61,26 @@
             color: $white;
         }
     }
+
+    &__menu {
+
+        .hamburger {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        span {
+            display: block;
+            border-bottom: 2px solid $white;
+            height: 2px;
+            width: 28px;
+        }
+
+        span:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
 }
 
 .feature {
@@ -68,15 +89,16 @@
 
     &__title {
         margin-bottom: 20px;
-        line-height: 1;
-        font-size: 4.25rem;
+        line-height: 1.4;
+        font-size: clamp(2.0625rem, 8vw, 4.25rem);
         text-align: center;
         color: $white;
     }
 
     &__sub__title {
         margin-bottom: 44px;
-        font-size: 20px;
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        text-align: center;
         color: $white;
         font-family: $font-stack-primary;
 
@@ -86,7 +108,18 @@
         padding: 0.825em 1.1em;
         margin: 0 .4em;
         border-radius: 50px;
+        text-align: center;
         font-weight: 700;
+
+        @include breakpoint-down(xsmall) {
+            margin-bottom: 1em;
+        }
+    }
+
+    &__button {
+        @include breakpoint-down(xsmall) {
+            flex-direction: column;
+        }
     }
 
     &__cta:first-child {
@@ -110,5 +143,9 @@
             background: $white;
             color: $lightRed;
         }
+    }
+
+    @include breakpoint-down(medium) {
+        margin: 1.5625em 0;
     }
 }

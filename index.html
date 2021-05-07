@@ -12,21 +12,28 @@
 <body>
 
   <header class="header">
-    <div class="container">
+    <div class="container container-mobile">
       <nav class="navigation flex flex--jc-sb flex--ai-c">
         <div class="navigation__left flex flex--jc-c flex--ai-c">
           <a href="#">
             <img src="app/images/logo.svg" alt="Blogr" class="navigation__logo">
           </a>
-          <ul>
+          <ul class="hide-for-mobile">
             <li class="navigation__dropdown"><a href="#">Products</a></li>
             <li class="navigation__dropdown"><a href="#">Company</a></li>
             <li class="navigation__dropdown"><a href="#">Connect</a></li>
           </ul>
         </div>
-        <div class="navigation__right flex flex--jc-c flex--ai-c">
+        <div class="navigation__right flex flex--jc-c flex--ai-c hide-for-mobile">
           <a href="#" class="navigation__link">Login</a>
           <a href="#" class="navigation__link navigation__cta">Sign Up</a>
+        </div>
+        <div class="navigation__menu hide-for-desktop">
+          <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
       <div class="feature flex flex--fd-c flex--ai-c">
