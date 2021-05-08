@@ -1,11 +1,13 @@
 @import 'variables';
 
+$gradientBackground: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 66%);
+
 .header {
     position: relative;
     height: 39.4375em;
     margin-bottom: 10em;
     // background: rgb(255,143,112);
-    background: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 66%);
+    background: $gradientBackground;
     border-bottom-left-radius: 8rem;
     z-index: 1;
 
@@ -26,6 +28,7 @@
 
 .navigation {
     height: 10.5em;
+    
 
     &__dropdown {
         position: relative;
@@ -62,13 +65,13 @@
         }
     }
 
-    &__menu {
+    &__button {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
 
-        .hamburger {
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
+    &__menu {
 
         span {
             display: block;
@@ -85,14 +88,16 @@
 
 .feature {
 
-    margin: 5.9375em 0;
+    margin: 3.4375em 0;
 
     &__title {
         margin-bottom: 20px;
         line-height: 1.4;
-        font-size: clamp(2.0625rem, 8vw, 4.25rem);
+        font-family: $font-stack-primary;
+        font-size: clamp(2.125rem, 8vw, 4.25rem);
         text-align: center;
         color: $white;
+
     }
 
     &__sub__title {
@@ -147,5 +152,81 @@
 
     @include breakpoint-down(medium) {
         margin: 1.5625em 0;
+        padding: 0 .7em;
+    }
+}
+
+.hamburger {
+    padding: 2em;
+    width: 100%;
+    border-radius: 5px;
+    background: $white;
+    transform: translateY(-40px);
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0 2em 2em 2em;
+
+        &::after {
+            content: '';
+            position: absolute;
+            border-top: 1px solid $grayishBlue;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5625em;
+        }
+        
+        a {
+            margin-right: .3em;
+            color: $vDarkGrayishBlue;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    .auth {
+        padding: 2em 2em 0 2em;
+        width: 100%;
+
+        %button {
+            font-weight: 500;
+        }
+
+        &__link:first-child {
+            color: $vDarkGrayishBlue;
+            margin-bottom: 1em;
+            @extend %button;
+        }
+
+        &__link:last-child {
+            @extend %button;
+        }
+
+        &__cta {
+            padding: 0.825em 2.375em;
+            border-radius: 50px;
+            background: $gradientBackground;
+            color: $white;
+            text-align: center;
+
+            @include breakpoint-down(xsmall) {
+                padding: 0.825em 1.375em;
+                min-width: 130px;
+            }
+        }
     }
 }

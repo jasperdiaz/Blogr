@@ -91,21 +91,23 @@ li {
 
 }
 
-
-.hide-for-mobile {
-  @include breakpoint-down(medium) {
+@include breakpoint-up(large) {
+  .hide-for-desktop {
     display: none;
   }
 }
 
-.hide-for-desktop {
-  @include breakpoint-up(large) {
-    display: none;
-  }
-}
+@include breakpoint-down(medium) {
 
-.container-mobile {
-  @include breakpoint-down (medium) {
+  .container-mobile {
     width: 85%;
+  }
+
+  .hide-for-mobile {
+    display: none;
+  }
+
+  .mobile-line-break {
+      display: block;
   }
 }

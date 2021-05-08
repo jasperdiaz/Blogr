@@ -91,12 +91,6 @@ li {
   align-items: center;
 }
 
-@media only screen and (max-width: 63.9375em) {
-  .hide-for-mobile {
-    display: none;
-  }
-}
-
 @media only screen and (min-width: 64em) {
   .hide-for-desktop {
     display: none;
@@ -106,6 +100,12 @@ li {
 @media only screen and (max-width: 63.9375em) {
   .container-mobile {
     width: 85%;
+  }
+  .hide-for-mobile {
+    display: none;
+  }
+  .mobile-line-break {
+    display: block;
   }
 }
 
@@ -169,7 +169,7 @@ li {
   color: white;
 }
 
-.navigation__menu .hamburger {
+.navigation__button {
   border: none;
   background: none;
   cursor: pointer;
@@ -187,13 +187,14 @@ li {
 }
 
 .feature {
-  margin: 5.9375em 0;
+  margin: 3.4375em 0;
 }
 
 .feature__title {
   margin-bottom: 20px;
   line-height: 1.4;
-  font-size: clamp(2.0625rem, 8vw, 4.25rem);
+  font-family: "Overpass", sans-serif;
+  font-size: clamp(2.125rem, 8vw, 4.25rem);
   text-align: center;
   color: white;
 }
@@ -250,6 +251,79 @@ li {
 @media only screen and (max-width: 63.9375em) {
   .feature {
     margin: 1.5625em 0;
+    padding: 0 .7em;
+  }
+}
+
+.hamburger {
+  padding: 2em;
+  width: 100%;
+  border-radius: 5px;
+  background: white;
+  transform: translateY(-40px);
+}
+
+.hamburger__menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 2em 2em 2em;
+}
+
+.hamburger__menu::after {
+  content: '';
+  position: absolute;
+  border-top: 1px solid #c8c8cb;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.hamburger__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hamburger__link:not(:last-child) {
+  margin-bottom: 1.5625em;
+}
+
+.hamburger__link a {
+  margin-right: .3em;
+  color: #4b5862;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hamburger .auth {
+  padding: 2em 2em 0 2em;
+  width: 100%;
+}
+
+.hamburger .auth .auth__link:first-child, .hamburger .auth .auth__link:last-child {
+  font-weight: 500;
+}
+
+.hamburger .auth__link:first-child {
+  color: #4b5862;
+  margin-bottom: 1em;
+}
+
+.hamburger .auth__cta {
+  padding: 0.825em 2.375em;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ff8f70 0%, #ff3d54 66%);
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (max-width: 23.375em) {
+  .hamburger .auth__cta {
+    padding: 0.825em 1.375em;
+    min-width: 130px;
   }
 }
 
