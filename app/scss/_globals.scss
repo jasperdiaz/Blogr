@@ -63,9 +63,21 @@ li {
   list-style: none;
 }
 
+.scroll-hidden {
+  overflow: hidden;
+}
+
 .container {
   width: 78.5%;
   margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 
@@ -94,6 +106,10 @@ li {
 @include breakpoint-up(large) {
   .hide-for-desktop {
     display: none;
+  }
+
+  .feature {
+    display: flex;
   }
 }
 
