@@ -39,17 +39,43 @@
 
       <div class="hamburger hidden hide-for-desktop" id="mobile-menu">
         <div class="hamburger__menu">
-          <div class="hamburger__link">
-            <a href="#">Products</a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg>
-          </div>
-          <div class="hamburger__link">
-            <a href="#">Company</a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg>
-          </div>
-          <div class="hamburger__link">
-            <a href="#">Connect</a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg>
+          <div class="accordion">
+            <div class="accordion__item flex flex--fd-c">
+              <button class="accordion__header flex flex--ai-c" id="accordion-products">
+                <p>Products</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg>
+              </button>
+              <div class="accordion__collapse hidden flex--fd-c flex--ai-c">
+                <a href="#" class="accordion__link">Overview</a>
+                <a href="#" class="accordion__link">Pricing</a>
+                <a href="#" class="accordion__link">Marketplace</a>
+                <a href="#" class="accordion__link">Features</a>
+                <a href="#" class="accordion__link">Integrations</a>
+              </div>
+            </div>
+            <div class="accordion__item flex flex--fd-c">
+              <button class="accordion__header flex flex--ai-c" id="accordion-company">
+                <p>Company</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg>
+              </button>
+              <div class="accordion__collapse hidden flex--fd-c flex--ai-c">
+                <a href="#" class="accordion__link">About</a>
+                <a href="#" class="accordion__link">Team</a>
+                <a href="#" class="accordion__link">Blog</a>
+                <a href="#" class="accordion__link">Careers</a>
+              </div>
+            </div>
+            <div class="accordion__item flex flex--fd-c">
+              <button class="accordion__header flex flex--ai-c" id="accordion-connect">
+                <p>Connect</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7"><path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/></svg>
+              </button>
+              <div class="accordion__collapse hidden flex--fd-c flex--ai-c">
+                <a href="#" class="accordion__link">Contact</a>
+                <a href="#" class="accordion__link">Newsletter</a>
+                <a href="#" class="accordion__link">LinkedIn</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="auth flex flex--fd-c flex--ai-c">
@@ -69,7 +95,7 @@
     </div>
   </header>
   
-
+<!-- 
   
 
   
@@ -119,7 +145,7 @@
   
   Contact
   Newsletter
-  LinkedIn
+  LinkedIn -->
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

@@ -276,13 +276,12 @@ li {
   border-radius: 5px;
   background: white;
   transform: translateY(-40px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .hamburger__menu {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  padding: 0 2em 2em 2em;
+  padding: 0 0 2em 0;
 }
 
 .hamburger__menu::after {
@@ -295,26 +294,8 @@ li {
   left: 0;
 }
 
-.hamburger__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.hamburger__link:not(:last-child) {
-  margin-bottom: 1.5625em;
-}
-
-.hamburger__link a {
-  margin-right: .3em;
-  color: #4b5862;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
 .hamburger .auth {
-  padding: 2em 2em 0 2em;
+  padding: 2em 0 0 0;
   width: 100%;
 }
 
@@ -340,6 +321,46 @@ li {
     padding: 0.825em 1.375em;
     min-width: 130px;
   }
+}
+
+.accordion__item {
+  width: 100%;
+}
+
+.accordion__header {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #4b5862;
+  font-size: 1rem;
+  font-weight: 500;
+  align-self: center;
+}
+
+.accordion__header:not(:last-child) {
+  margin-bottom: 1.5625em;
+}
+
+.accordion__header p {
+  margin-right: .3em;
+}
+
+.accordion__collapse {
+  padding: 1.5em;
+  margin-bottom: 1.5625em;
+  border-radius: 5px;
+  background: #efeff1;
+}
+
+.accordion__link {
+  color: #4b5862;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.accordion__link:not(:last-child) {
+  margin-bottom: 18px;
 }
 
 .attribution {

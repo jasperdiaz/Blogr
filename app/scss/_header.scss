@@ -162,12 +162,11 @@ $gradientBackground: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,
     border-radius: 5px;
     background: $white;
     transform: translateY(-40px);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 
     &__menu {
-        display: flex;
-        flex-direction: column;
         position: relative;
-        padding: 0 2em 2em 2em;
+        padding: 0 0 2em 0;
 
         &::after {
             content: '';
@@ -180,26 +179,8 @@ $gradientBackground: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,
         }
     }
 
-    &__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-
-        &:not(:last-child) {
-            margin-bottom: 1.5625em;
-        }
-        
-        a {
-            margin-right: .3em;
-            color: $vDarkGrayishBlue;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-    }
-
     .auth {
-        padding: 2em 2em 0 2em;
+        padding: 2em 0 0 0;
         width: 100%;
 
         %button {
@@ -227,6 +208,53 @@ $gradientBackground: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,
                 padding: 0.825em 1.375em;
                 min-width: 130px;
             }
+        }
+    }
+}
+
+// Accordion 
+
+.accordion {
+
+    &__item {
+        width: 100%;
+    }
+
+    &__header {
+
+        padding: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: $vDarkGrayishBlue;
+        font-size: 1rem;
+        font-weight: 500;
+        align-self: center;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5625em;
+        }
+
+        p {
+            margin-right: .3em;
+        }
+        
+    }
+    
+    &__collapse {
+        padding: 1.5em;
+        margin-bottom: 1.5625em;
+        border-radius: 5px;
+        background: $gray;
+    }
+
+    &__link {
+        color: $vDarkGrayishBlue;
+        font-size: 1rem;
+        font-weight: 500;
+
+        &:not(:last-child) {
+            margin-bottom: 18px;
         }
     }
 }
