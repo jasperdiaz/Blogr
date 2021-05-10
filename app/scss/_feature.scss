@@ -78,6 +78,25 @@
         &__title {
             text-align: center;
         }
+
+        &__image {
+            display: block;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1181px) {
+        &::before {
+            background-size: 70%;
+            right: -190px;
+            top: 130px;
+        }
+    }
+
+    @media only screen and (min-width: 1182px) and (max-width: 1329px) {
+        &::before {
+            background-size: 80%;
+            right: -220px;
+        }
     }
 
 }
