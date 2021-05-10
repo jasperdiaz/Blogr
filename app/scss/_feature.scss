@@ -1,0 +1,83 @@
+@import 'variables';
+
+.feature {
+
+    position: relative;
+    padding: 9.3em 0;
+    z-index: 1;
+    overflow: hidden;
+
+    %title-stack {
+        font-size: clamp(1.3rem, 4.3vh, 2.2rem);
+        color: $vDarkBlue;
+        line-height: 1.2;
+    }
+
+    &__image {
+        display: none;
+    }
+
+    &__sub-header {
+        margin-top: 2.8125em;
+    }
+    
+    &__title {
+        @extend %title-stack;
+        margin-bottom: 1.5em;
+    }
+
+    &__main-title {
+        @extend %title-stack;
+        margin-bottom: 1.5em;
+    }
+
+    &__description {
+        font-size: clamp(.8rem, 2.9vh, 1rem);;
+        text-align: center;
+        color: $vDarkGrayishBlue;
+    }
+
+    @include breakpoint-up(large) {
+        &::before {
+            content: '';
+            position: absolute;
+            right: -250px;
+            top: 35px;
+            bottom: 0;
+            background-image: url('../../app/images/illustration-editor-desktop.svg');
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: 90%;
+            width: 952px;
+            height: 882px;
+
+        }
+
+        &__title,
+        &__description {
+            text-align: initial;
+        }
+
+        &__split {
+            width: 100%;
+            position: relative;
+        }
+
+        &__right {
+            order: 2;
+        }
+    
+        &__left {
+            width: 50%;
+            margin-right: 0 auto;
+            order: 1;
+        }
+    }
+
+    @include breakpoint-down (medium) {
+        &__title {
+            text-align: center;
+        }
+    }
+
+}

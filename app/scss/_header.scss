@@ -5,8 +5,6 @@ $gradientBackground: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,
 .header {
     position: relative;
     height: 39.4375em;
-    margin-bottom: 10em;
-    // background: rgb(255,143,112);
     background: $gradientBackground;
     border-bottom-left-radius: 8rem;
     z-index: 1;
@@ -86,7 +84,7 @@ $gradientBackground: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,
     }
 }
 
-.feature {
+.hero {
 
     margin: 3.4375em 0;
 

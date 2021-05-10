@@ -80,6 +80,9 @@ li {
   display: block;
 }
 
+.text-center {
+  text-align: center;
+}
 
 .flex {
 
@@ -101,6 +104,14 @@ li {
     align-items: center;
   }
 
+}
+
+@include breakpoint-up(xlarge) {
+  
+  .container-narrow {
+    max-width: 70em;
+  }
+  
 }
 
 @include breakpoint-up(large) {
