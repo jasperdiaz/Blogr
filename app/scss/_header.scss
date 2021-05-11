@@ -6,7 +6,7 @@ $gradientBackground: linear-gradient(90deg, rgba(255,143,112,1) 0%, rgba(255,61,
     position: relative;
     height: 39.4375em;
     background: $gradientBackground;
-    border-bottom-left-radius: 8rem;
+    border-bottom-left-radius: 8em;
     z-index: 1;
 
     &::before {

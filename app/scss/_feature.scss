@@ -3,7 +3,8 @@
 .feature {
 
     position: relative;
-    padding: 9.3em 0;
+    padding: 9.3em 0 17em 0;
+    height: 62.5em;
     z-index: 1;
     overflow: hidden;
 
@@ -23,7 +24,7 @@
     
     &__title {
         @extend %title-stack;
-        margin-bottom: 1.5em;
+        margin-bottom: .5em;
     }
 
     &__main-title {
