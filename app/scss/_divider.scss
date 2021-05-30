@@ -3,10 +3,8 @@
 .divider {
 
     position: relative;
-    // padding: 5em 0;
     border-top-right-radius: 8em;
     border-bottom-left-radius: 8em;
-    background: rgb(44,45,63);
     background: linear-gradient(90deg, rgba(44,45,63,1) 0%, rgba(63,65,100,1) 66%);
 
     &::before {
@@ -22,27 +20,29 @@
         z-index: 3;
     }
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: -110px;
-        left: 110px;
-        background: url("../../app/images/illustration-phones.svg") no-repeat;
-        background-size: 100%;
-        width: 552px;
-        height: 579px;
-        z-index: 6;
+    &__circle {
+        // position: absolute;
+        // top: -31em;
+        // left: -14.5em;
+        display: none;
     }
 
     &__item {
         position: relative;
         z-index: 4;
-        height: 25em;
+        padding: 8.4em 0;
+    }
+
+    &__split {
+        position: relative;
+    }
+
+    &__illustration {
+        flex-basis: 50%;
     }
 
     &__header {
-        width: 50%;
-        margin-left: auto;
+        flex-basis: 50%;
     }
 
     &__title {
@@ -53,6 +53,88 @@
 
     &__description {
         color: $grayishBlue;
+    }
+
+    @include breakpoint-down(medium) {
+
+        background: none;
+
+        &::before {
+            display: none;
+        }
+
+        &__item::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            background: url('../../app/images/bg-pattern-circles.svg') no-repeat;
+            background-size: 150%;
+            background-position: center center;
+            top: -164px;
+            right: 0;
+            left: 0;
+            z-index: 5;
+        }
+
+        &__item::after {
+            content: '';
+            position: absolute;
+            height: 79%;
+            background: linear-gradient(90deg, rgba(44,45,63,1) 0%, rgba(63,65,100,1) 66%);
+            border-top-right-radius: 8em;
+            border-bottom-left-radius: 8em;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        &__item {
+            padding: 0 0 6em 0;
+        }
+
+        &__split {
+            flex-direction: column;
+            z-index: 5;
+        }
+
+        // &__circle {
+        //     display: block;
+        //     position: absolute;
+        // }
+
+        &__image {
+            position: relative;
+        }
+
+        &__header {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    @include breakpoint-up(large){
+        &__image {
+            position: absolute;
+            top: -200px;
+            left: -40px;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1149px) {
+        &::after {
+            bottom: -140px;
+            left: 10px;
+            background-size: 90%;
+        }
+    }
+
+    @media only screen and (min-width: 1150px) and (max-width: 1346px) {
+        &::after {
+            bottom: -140px;
+            left: 50px;
+            background-size: 95%;
+        }
     }
     
 }

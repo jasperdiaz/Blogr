@@ -76,6 +76,8 @@
     }
 
     @include breakpoint-down (medium) {
+
+        height: auto;
         &__title {
             text-align: center;
         }

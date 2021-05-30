@@ -444,6 +444,9 @@ li {
 }
 
 @media only screen and (max-width: 63.9375em) {
+  .feature {
+    height: auto;
+  }
   .feature__title {
     text-align: center;
   }
@@ -471,7 +474,6 @@ li {
   position: relative;
   border-top-right-radius: 8em;
   border-bottom-left-radius: 8em;
-  background: #2c2d3f;
   background: linear-gradient(90deg, #2c2d3f 0%, #3f4164 66%);
 }
 
@@ -488,27 +490,26 @@ li {
   z-index: 3;
 }
 
-.divider::after {
-  content: '';
-  position: absolute;
-  bottom: -110px;
-  left: 110px;
-  background: url("../../app/images/illustration-phones.svg") no-repeat;
-  background-size: 100%;
-  width: 552px;
-  height: 579px;
-  z-index: 6;
+.divider__circle {
+  display: none;
 }
 
 .divider__item {
   position: relative;
   z-index: 4;
-  height: 25em;
+  padding: 8.4em 0;
+}
+
+.divider__split {
+  position: relative;
+}
+
+.divider__illustration {
+  flex-basis: 50%;
 }
 
 .divider__header {
-  width: 50%;
-  margin-left: auto;
+  flex-basis: 50%;
 }
 
 .divider__title {
@@ -519,6 +520,77 @@ li {
 
 .divider__description {
   color: #c8c8cb;
+}
+
+@media only screen and (max-width: 63.9375em) {
+  .divider {
+    background: none;
+  }
+  .divider::before {
+    display: none;
+  }
+  .divider__item::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background: url("../../app/images/bg-pattern-circles.svg") no-repeat;
+    background-size: 150%;
+    background-position: center center;
+    top: -164px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+  }
+  .divider__item::after {
+    content: '';
+    position: absolute;
+    height: 79%;
+    background: linear-gradient(90deg, #2c2d3f 0%, #3f4164 66%);
+    border-top-right-radius: 8em;
+    border-bottom-left-radius: 8em;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .divider__item {
+    padding: 0 0 6em 0;
+  }
+  .divider__split {
+    flex-direction: column;
+    z-index: 5;
+  }
+  .divider__image {
+    position: relative;
+  }
+  .divider__header {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .divider__image {
+    position: absolute;
+    top: -200px;
+    left: -40px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1149px) {
+  .divider::after {
+    bottom: -140px;
+    left: 10px;
+    background-size: 90%;
+  }
+}
+
+@media only screen and (min-width: 1150px) and (max-width: 1346px) {
+  .divider::after {
+    bottom: -140px;
+    left: 50px;
+    background-size: 95%;
+  }
 }
 
 .attribution {
