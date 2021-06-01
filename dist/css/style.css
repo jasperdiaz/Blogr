@@ -129,6 +129,7 @@ li {
 @media only screen and (max-width: 63.9375em) {
   .container-mobile {
     width: 85%;
+    margin: 0 auto;
   }
   .hide-for-mobile {
     display: none;
@@ -474,20 +475,10 @@ li {
   position: relative;
   border-top-right-radius: 8em;
   border-bottom-left-radius: 8em;
-  background: linear-gradient(90deg, #2c2d3f 0%, #3f4164 66%);
-}
-
-.divider::before {
-  content: '';
-  position: absolute;
-  top: -513px;
-  left: -230px;
-  background: url("../../app/images/bg-pattern-circles.svg") no-repeat;
-  background-size: 100%;
-  height: 1018px;
-  width: 1014px;
-  clip-path: inset(513px 0px 104px 0px);
-  z-index: 3;
+  background-image: url("../../app/images/bg-pattern-circles.svg"), linear-gradient(#2c2d3f, #3f4164);
+  background-size: 65.2%, 100%;
+  background-repeat: no-repeat;
+  background-position: left -10rem top -28rem, left;
 }
 
 .divider__circle {
@@ -526,26 +517,20 @@ li {
   .divider {
     background: none;
   }
+  .divider .container {
+    width: 100%;
+  }
   .divider::before {
     display: none;
-  }
-  .divider__item::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    background: url("../../app/images/bg-pattern-circles.svg") no-repeat;
-    background-size: 150%;
-    background-position: center center;
-    top: -164px;
-    right: 0;
-    left: 0;
-    z-index: 5;
   }
   .divider__item::after {
     content: '';
     position: absolute;
-    height: 79%;
-    background: linear-gradient(90deg, #2c2d3f 0%, #3f4164 66%);
+    height: 77%;
+    background-image: url("../../app/images/bg-pattern-circles.svg"), linear-gradient(#2c2d3f, #3f4164);
+    background-repeat: no-repeat;
+    background-size: 155%, 100%;
+    background-position: center top calc(-54vw + 50%), center;
     border-top-right-radius: 8em;
     border-bottom-left-radius: 8em;
     bottom: 0;

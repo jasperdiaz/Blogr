@@ -5,20 +5,23 @@
     position: relative;
     border-top-right-radius: 8em;
     border-bottom-left-radius: 8em;
-    background: linear-gradient(90deg, rgba(44,45,63,1) 0%, rgba(63,65,100,1) 66%);
+    background-image: url("../../app/images/bg-pattern-circles.svg"), $darkGrayBlueGradient;
+    background-size: 65.2%, 100%;
+    background-repeat: no-repeat;
+    background-position: left -10rem top -28rem, left;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: -513px;
-        left: -230px;
-        background: url("../../app/images/bg-pattern-circles.svg") no-repeat;
-        background-size: 100%;
-        height: 1018px;
-        width: 1014px;
-        clip-path: inset(513px 0px 104px 0px);
-        z-index: 3;
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: -513px;
+    //     left: -230px;
+    //     background: url("../../app/images/bg-pattern-circles.svg") no-repeat;
+    //     background-size: 100%;
+    //     height: 1018px;
+    //     width: 1014px;
+    //     clip-path: inset(513px 0px 104px 0px);
+    //     z-index: 3;
+    // }
 
     &__circle {
         // position: absolute;
@@ -31,6 +34,10 @@
         position: relative;
         z-index: 4;
         padding: 8.4em 0;
+
+        // background: $vDarkGrayBlue;
+        //     border-top-right-radius: 8em;
+        //     border-bottom-left-radius: 8em;
     }
 
     &__split {
@@ -56,6 +63,10 @@
     }
 
     @include breakpoint-down(medium) {
+        
+        .container {
+            width: 100%;
+        }
 
         background: none;
 
@@ -63,24 +74,28 @@
             display: none;
         }
 
-        &__item::before {
-            content: '';
-            position: absolute;
-            height: 100%;
-            background: url('../../app/images/bg-pattern-circles.svg') no-repeat;
-            background-size: 150%;
-            background-position: center center;
-            top: -164px;
-            right: 0;
-            left: 0;
-            z-index: 5;
-        }
+        // &__item::before {
+        //     content: '';
+        //     position: absolute;
+        //     background: url('../../app/images/bg-pattern-circles.svg') no-repeat;
+        //     background-size: 595px;
+        //     background-position: center center;
+        //     height: 1018px;
+        //     top: -275px;
+        //     right: 0;
+        //     left: 0;
+        //     z-index: 5;
+        //     // clip-path: inset(513px 0px 104px 0px);
+        // }
 
         &__item::after {
             content: '';
             position: absolute;
-            height: 79%;
-            background: linear-gradient(90deg, rgba(44,45,63,1) 0%, rgba(63,65,100,1) 66%);
+            height: 77%;
+            background-image: url("../../app/images/bg-pattern-circles.svg"), $darkGrayBlueGradient;
+            background-repeat: no-repeat;
+            background-size: 155%, 100%;
+            background-position: center top calc(-54vw + 50%), center;
             border-top-right-radius: 8em;
             border-bottom-left-radius: 8em;
             bottom: 0;
@@ -100,6 +115,10 @@
         // &__circle {
         //     display: block;
         //     position: absolute;
+        //     max-width: 664px;
+        //     left: 0;
+        //     z-index: 5;
+        //     top: -81px;
         // }
 
         &__image {
